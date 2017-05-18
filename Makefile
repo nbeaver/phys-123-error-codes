@@ -2,7 +2,7 @@
 
 LATEX = $(wildcard *.tex)
 PDF = $(patsubst %.tex, %.pdf, $(LATEX))
-ARCHIVE = project.zip
+ARCHIVE = error_codes.zip
 
 all : $(PDF)
 
