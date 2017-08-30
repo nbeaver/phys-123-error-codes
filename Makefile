@@ -9,7 +9,7 @@ all : $(PDF)
 %.pdf : %.tex
 	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make $<
 
-$(ARCHIVE) : Makefile $(LATEX)
+$(ARCHIVE) : Makefile $(LATEX) $(PDF) readme.rst .gitignore
 	zip $@ $^
 
 clean :
