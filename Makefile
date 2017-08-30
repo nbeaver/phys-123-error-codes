@@ -7,7 +7,7 @@ ARCHIVE = error_codes.zip
 all : $(PDF)
 
 %.pdf : %.tex
-	latexmk -bibtex -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make $<
+	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make $<
 
 $(ARCHIVE) : Makefile $(LATEX)
 	zip $@ $^
