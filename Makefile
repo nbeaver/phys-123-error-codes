@@ -12,9 +12,6 @@ all : $(PDF)
 $(ARCHIVE) : Makefile $(LATEX)
 	zip $@ $^
 
-wordcount : $(TEX)
-	texcount $(TEX)
-
 clean :
 	latexmk -C
 	rm -f $(ARCHIVE)
